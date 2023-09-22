@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!--Icons-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="liste.png">
+
+    <title>Einkaufsliste</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Anna's Einkaufsliste</h1>
+
+            <div class="input-section">
+                <input id="list-input" type="text" placeholder="📑 Ich brauche ..."
+                    class="input w-full max-w-xs" />
+                <button id="add-button" class="btn btn-add ">
+                    <i class="bx bx-plus bx-sm"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Lösch buttons -->
+
+        <div class="liste-filter">
+
+            <button id="delete-selected" class="btn auswahl">
+                Ausgewählte löschen
+            </button>
+            <button id="delete-all" class="btn delete-all">
+                Alles löschen
+            </button>
+        </div>
+
+
+        <!-- Dies ist der dynamische Inhalt, der die gesamte Liste zusammenfasst -->
+        <ul id="einkaufliste-array" class="einkaufliste-array">
+
+        </ul>
+
+
+        <!-- Dropdown-Menü, über das wir Filter anwenden können -->
+        <div class="filters">
+            <div class="dropdown">
+                <button class="dropbtn">Sortierung</button>
+                <div class="dropdown-content">
+                    <a href="#" id="all">Alle</a>
+                    <a href="#" id="rem">Ausstehend</a>
+                    <a href="#" id="com">Vollendet</a>
+                </div>
+            </div>
+
+            
+            <div class="completed">
+                <p>Vollendet: <span id="c-count">0</span></p>
+            </div>
+            <div class="remaining">
+                <p>Gesamt: <span id="r-count">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>
